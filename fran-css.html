@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" href="/favicon.ico">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.typekit.net/utn5jle.css">
+
+        <link rel="stylesheet" href="/Users/chummel/Desktop/Projects/Franciscan/Main CSS/fran.css">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="/Users/chummel/Desktop/Projects/Franciscan/Root/PDP/assets/boot.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/269f123423.js" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    
+
+    </head>
+
+
+    <body>
+
+        <header class="doc-header">
+            <div class="doc-header-wrap">
+                <div class="logo">
+                    <p><a href="home.html">Franciscan Brands CSS Documentation</a></p>
+                </div>
+
+                <div class="right-side-nav">
+                    <ul>
+                        <li><a href="good-to-know.html">Good to Know</a></li>
+                        <li><a href="general-css.html">General CSS</a></li>
+                        <li><a href="fran-css.html">Franciscan CSS</a></li>
+                        <li><a href="#">Faith & Reason CSS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+
+
+        <main class="general-css-main">
+
+            <!-- Intro -->
+            <section class="row">
+                <div class="site-para-box">
+                    <h1>Fran CSS</h1>
+                    <p><em>Page last updated Oct 2, 2024</em></p>
+                </div>
+            </section>
+
+
+            <!-- Rows -->
+            <section class="row pad-2y" id="row">
+                <div class="site-para-box">
+
+                    <h2>Text Headers</h2>
+
+                    <p><strong><em>Note: Do not use a specific header tag just because you like the color, font size, etc. Headers should organize content on the page in number order and should contain content below the header that is relevant to the header.</em></strong> Think of headers how you would organize notes in school. Maybe you'd organize them first by the name of the chapter (h1), then by chapter sections (h2), then by key points for each chapter section (h3), and so on. </p>
+
+                    <h3 style="border-top: 1px solid #959595; padding-top: 4px;">H1</h3>
+                    <p>H1 tags are typically only used within hero headers. Jump to <a href="">heros</a>.</p>
+
+
+                    <h3 style="border-top: 1px solid #959595; padding-top: 4px;">H2</h3>
+                    <p>Franciscan H2 tags are tyically styled by using the class <code>root-h2</code>.</p>
+                    <p>H2 tags should be used for headers after use of an H1 tag, for top level organization of content on a page. </p>
+
+                    <div class="doc-code-wrap">
+                        <samp>
+                            .root-h2 {
+                                <span class="ind-1">text-align: center;</span>
+                                <span class="ind-1">color: var(--fran-red);</span>
+                                <span class="ind-1">font-size: 1.7em;</span>
+                                <span class="ind-1">line-height: 1.2em;</span>
+                                <span class="ind-1">font-family: 'bennet-banner';</span>
+                                <span class="ind-1">font-weight: 'bold';</span>
+                                <span class="ind-1">margin-bottom: 1em;</span>
+                            }
+                        </samp>
+                    </div>
+                    <p>Other classes and inline styles can be used to alter the h2 text's styling.</p>
+
+
+                    <h3 style="border-top: 1px solid #959595; padding-top: 4px;">H3</h3>
+                    <p>Franciscan H3 tags are tyically styled by using the class <code>root-h3</code>.</p>
+                    <p>H3 tags should be used for organization of content under h2 tags. </p>
+
+                    <div class="doc-code-wrap">
+                        <samp>
+                            .root-h2 {
+                                <span class="ind-1">color: var(--fran-green);</span>
+                                <span class="ind-1">font-size: 1.5em;</span>
+                                <span class="ind-1">line-height: 1.2em;</span>
+                                <span class="ind-1">font-family: 'objektiv-mk3';</span>
+                                <span class="ind-1">font-weight: 'bold';</span>
+                                <span class="ind-1">margin-bottom: 1em;</span>
+                            }
+                        </samp>
+                    </div>
+                    <p>Other classes and inline styles can be used to alter the h3 text's styling.</p>
+
+
+                    <h3>Other Headers</h3>
+                    <p>Other headers (as of the date this page has been updated) typically rely on the Wordpress theme's settings applied to those headers. </p>
+                    <p>See the Wordpress theme backend for styles.</p>
+
+
+                </div>
+            </section>
+
+
+            <!-- Hero Headers 2024 Branding -->
+            <section class="row pad-2y">
+                <div class="site-para-box">
+                    <h2>Hero Headers (2024 New Branding)</h2>
+                    <div class="doc-code-wrap">
+                        <samp>
+                            &lt;section id="siteHeader" class="site-header row"&gt;
+                                &nbsp;&nbsp; &lt;div class="site-header-gradient"&gt;
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="site-content-box" style="max-width: 1300px;"&gt;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h1&gt;Online Master of Business Administration&lt;/h1&gt;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;p class="subtitle"&gt;Franciscan University of Steubenville&lt;/p&gt;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="btn-row"&gt;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a href="https://encounter.franciscan.edu/portal/enrollment-landing" class="root-lowercase-btn" target="_blank"&gt;Apply Now&lt;/a&gt;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;button class="root-lowercase-btn inquire-scroll-btn"&gt;Inquire&lt;/button&gt;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;
+                                        &nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;
+                                &nbsp;&nbsp; &lt;/div&gt;
+                            &lt;/section&gt;
+                        </samp>
+                    </div>
+                    <div class="doc-code-wrap">
+                        <p>Example Preview</p>
+                        <section class="fran-site-header row">
+                            <div class="fran-site-header-gradient">
+                                <div class="site-content-box" style="max-width: 1300px;">
+                                    <h1>Online Master of Business Administration</h1>
+                                    <p class="subtitle">Franciscan University of Steubenville</p>
+                                    <div class="btn-row">
+                                        <a href="#" class="root-lowercase-btn" target="_blank">Apply Now</a>
+                                        <button class="root-lowercase-btn inquire-scroll-btn">Inquire</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <style>
+                            .fran-site-header .site-content-box {
+                                padding-top: 3em;
+                            }
+                            .fran-site-header {
+                                background-color: #e7e7e7;
+                                min-height: 58vh;
+                                background-image: url('https://franciscan.edu/wp-content/uploads/2024/07/mba-header.jpeg');
+                                background-size: cover;
+                                background-position-x: 13%;
+                                background-position-y: 30%;
+                            }
+                            .fran-site-header-gradient {
+                                width: 100%;
+                                height: 100%;
+                                min-height: 58vh;
+                                background: linear-gradient(0deg, black, #3943464f);
+                                display: flex;
+                                display: -ms-flexbox;
+                            }
+                            .fran-site-header h1 {
+                                font-family: 'bennet-banner', sans-serif;
+                                color: white;
+                                font-size: 2.5em;
+                                border-bottom: 1px solid white;
+                                margin-bottom: 0.25em;
+                            }
+                            .fran-site-header .subtitle {
+                                font-family: 'objektiv-mk3';
+                                font-size: 1.2em;
+                                margin-top: 0;
+                            }
+                            .fran-site-header .btn-row .root-lowercase-btn {
+                                background-color: transparent;
+                                color: white;
+                                border-color: white;
+                                display: inline-block;
+                                margin-right: 10px;
+                                padding: 0.8em 1.4em;
+                            }
+                            .fran-site-header .btn-row .root-lowercase-btn:hover {
+                                background-color: white;
+                                color: #2b2b2b;
+                            }
+                            @media only screen and (max-width: 600px) {
+                                .fran-site-header, .fran-site-header-gradient {
+                                    min-height: 80vh;
+                                }
+                            }
+                        </style>
+                    </div>
+
+                    <p>The 2024 branded header consists of a left aligned h1 with the font 'Bennet Banner', in <a href="https://titlecaseconverter.com/rules/">Title Case</a>.</p>
+                    <p>The subtitle is 'objektiv-mk3' underneath the h1's bottom border.</p>
+                    <p>Buttons can be added horizontally underneath the subtitle.</p>
+                    <p>To change the background image and gradient, an additional class can be added to <code>site-header</code> or <code>site-header-gradient</code> respectively, or inline styles.</p>
+                </div>
+            </section>
+
+
+
+
+            <!-- Hero Headers Old Branding -->
+            <section class="row pad-2y">
+                <div class="site-para-box">
+                    <h2>Hero Headers (Old Branding)</h2>
+                    <p><strong>Note: This code should only be used as a reference, and any new pages should use the new 2024 branding.</strong></p>
+                    <div class="doc-code-wrap">
+                        <samp>
+                            &lt;div class="row root-header"&gt;
+                                &nbsp;&nbsp; &lt;div class="header-img-container" style="background-image: url('https://spt.franciscan.edu/wp-content/uploads/sites/5/2019/02/Statue.jpg'); background-position-x: center; background-position-y: 50%;"&gt;
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="root-header-gradient" style="background: linear-gradient(0deg, #141213, transparent);"&gt;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h1 class="root-header-title root-program-header-title">MA in Catholic Studies Program&lt;/h1&gt;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;h2 class="root-header-subtitle" style="margin-top: 5px;">Franciscan University of Steubenville&lt;/h2&gt;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div class="row" style="justify-content: center;"&gt;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a href="http://franciscan.edu/inquire" class="root-lowercase-btn" style="margin: 10px;" target="_blank"&gt;Inquire&lt;/a&gt;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;a href="https://encounter.franciscan.edu/portal/enrollment-landing" class="root-lowercase-btn" style="margin: 10px;" target="_blank">Apply&lt;/a&gt;
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;
+                                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;/div&gt;
+                                &nbsp;&nbsp; &lt;/div&gt;
+                            &lt;/div&gt;
+                        </samp>
+                    </div>
+                    <div class="doc-code-wrap">
+                        <p>Example Preview</p>
+                        <div class="row root-header">
+                            <div class="header-img-container" style="background-image: url('https://spt.franciscan.edu/wp-content/uploads/sites/5/2019/02/Statue.jpg'); background-position-x: center; background-position-y: 50%;">
+                                <div class="root-header-gradient" style="background: linear-gradient(0deg, #141213, transparent);">
+                                    <h1 class="root-header-title root-program-header-title">MA in Catholic Studies Program</h1>
+                                    <h2 class="root-header-subtitle" style="margin-top: 5px;">Franciscan University of Steubenville</h2>
+                                    <div class="row" style="justify-content: center;">
+                                        <a href="http://franciscan.edu/inquire" class="root-lowercase-btn" style="margin: 10px;" target="_blank">Inquire</a>
+                                        <a href="https://encounter.franciscan.edu/portal/enrollment-landing" class="root-lowercase-btn" style="margin: 10px;" target="_blank">Apply</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <style>
+                            .root-header-subtitle {
+                                background: none!important;
+                                color: #fbb555!important;
+                            }
+                        </style>
+                    </div>
+
+                    <p>The old header consists of a center aligned h1 with the font 'Montserrat' in uppercase.</p>
+                    <p>The subtitle is a center aligned h2 with the font 'Montserrat' and also uppercase.</p>
+                    <p>Buttons can be added horizontally underneath the subtitle.</p>
+                    <p>To change the background image and gradient, an additional class can be added to <code>site-header</code> or <code>site-header-gradient</code> respectively, or inline styles.</p>
+                </div>
+            </section>
+
+
+
+
+            <!-- Buttons -->
+            <section class="row pad-2y">
+                <div class="site-para-box">
+                    <h2>Buttons</h2>
+                    <div class="doc-code-wrap">
+                        <samp>
+                            .root-lowercase-btn {
+                                <span class="ind-1">background-color: var(--root-lowercase-btn-background-color);</span>
+                                <span class="ind-1">--root-lowercase-btn-background-color: #fbb555;</span>
+                                <span class="ind-1">color: var(--root-lowercase-btn-color);</span>
+                                <span class="ind-1">--root-lowercase-btn-color: #2b2b2b;</span>
+                                <span class="ind-1">border: 1px solid transparent;</span>
+                                <span class="ind-1">border-color: var(--root-lowercase-btn-border-color);</span>
+                                <span class="ind-1">--root-lowercase-btn-border-color: transparent;</span>
+                                <span class="ind-1">border-radius: 25px;</span>
+                                <span class="ind-1">font-size: 1em;</span>
+                                <span class="ind-1">font-family: 'Montserrat';</span>
+                                <span class="ind-1">padding: .75em 1em;</span>
+                                <span class="ind-1">font-weight: 600;</span>
+                                <span class="ind-1">text-decoration: none;</span>
+                                <span class="ind-1">cursor: pointer;</span>
+                                <span class="ind-1">transition: 0.2s;</span>
+                                <span class="ind-1">display: block;</span>
+                                <span class="ind-1">width: fit-content;</span>
+                                <span class="ind-1">margin: 10px auto;</span>
+                            }
+
+                            .root-lowercase-btn:hover {
+                                <span class="ind-1">background-color: var(--root-lowercase-btn-background-color);</span>
+                                <span class="ind-1">--root-lowercase-btn-background-color: #fbb555;</span>
+                                <span class="ind-1">color: var(--root-lowercase-btn-color);</span>
+                                <span class="ind-1">--root-lowercase-btn-color: #2b2b2b;</span>
+                                <span class="ind-1">box-shadow: 0 0 5px #fbb5555c;</span>
+                            }
+                        </samp>
+                    </div>
+
+                    <p>There's really only one button class used in regular page development: <code>root-lowercase-btn</code>.</p>
+                    <div class="row pad-3y" style="background-color: #0b0b0b;">
+                        <div class="site-para-box" style="max-width: 400px; margin: auto;">
+                            <a href="#" class="root-lowercase-btn">Button</a>
+                        </div>
+                    </div>
+
+                    <p>
+                        The 'root lowercase button' is named such since some original designs had multiple types of buttons, warranting the use of 'lowercase-root-btn' as opposed to some obsolete classes, i.e. 'site-lrg-btn' (within the Franciscan Giving subdomain).
+                    </p>
+                    <p>
+                        At times, this class might be used in an environment where only inline editing of styles is available (as opposed to custom classes). This is why the color variables exist:
+                        <ul>
+                            <li><p>--root-lowercase-btn-background-color</p></li>
+                            <li><p>--root-lowercase-btn-color</p></li>
+                            <li><p>--root-lowercase-btn-background-color-hover</p></li>
+                            <li><p>--root-lowercase-btn-color-hover</p></li>
+                        </ul>
+                    </p>
+                    <p>Using these styles inline allows the hover state to be changed regardless of the amount of CSS freedom you have. For example:</p>
+                    <p><code>&lt;a href="#" class="root-lowercase-btn" style="--root-lowercase-btn-background-color: #21412a; --root-lowercase-btn-color: white; --root-lowercase-btn-background-color-hover: purple; --root-lowercase-btn-color-hover: rgb(239, 221, 150);"&gt;Test Button&lt;/a&gt;</code></p>
+                    <div class="row pad-3y" style="background-color: #0b0b0b;">
+                        <div class="site-para-box" style="max-width: 400px; margin: auto;">
+                            <a href="#" class="root-lowercase-btn" style="--root-lowercase-btn-background-color: #21412a; --root-lowercase-btn-color: white; --root-lowercase-btn-background-color-hover: purple; --root-lowercase-btn-color-hover: rgb(239, 221, 150);">Test Button</a>
+                        </div>
+                    </div>
+                    <p>Notice the starting background color and text color of the button are different from the default, while the hover is </p>
+
+                </div>
+            </section>
+
+
+
+
+        </main>
+
+    </body>
+
+
+
+</html>

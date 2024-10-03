@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" href="/favicon.ico">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.typekit.net/utn5jle.css">
+
+        <link rel="stylesheet" href="/Users/chummel/Desktop/Projects/Franciscan/Main CSS/fran.css">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="/Users/chummel/Desktop/Projects/Franciscan/Root/PDP/assets/boot.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/269f123423.js" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    
+
+    </head>
+
+
+    <body>
+
+        <header class="doc-header">
+            <div class="doc-header-wrap">
+                <div class="logo">
+                    <p><a href="home.html">Franciscan Brands CSS Documentation</a></p>
+                </div>
+
+                <div class="right-side-nav">
+                    <ul>
+                        <li><a href="good-to-know.html">Good to Know</a></li>
+                        <li><a href="general-css.html">General CSS</a></li>
+                        <li><a href="fran-css.html">Franciscan CSS</a></li>
+                        <li><a href="#">Faith & Reason CSS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+
+
+        <main class="general-css-main">
+
+            <!-- Intro -->
+            <section class="row">
+                <div class="site-para-box">
+                    <h1>The Franciscan Brand on the Web</h1>
+                    <p><em>Page last updated Oct 2, 2024</em></p>
+                </div>
+            </section>
+
+            <!-- Intro -->
+            <section class="row pad-3y">
+                <div class="site-para-box" style="max-width: 1300px;">
+                    <p>
+                        In 2024, Franciscan University received new brand guidelines that included new colors, fonts, logos, voice, tagline, and more. Many of the old colors and fonts are still in use, however, making the "new" brand guideline a mix of old and new. Brand elements that are or will become obsolete will be noted in this guide.
+                    </p>
+                </div>
+            </section>
+
+
+            <!-- Colors -->
+            <section class="row pad-2y" id="row">
+                <div class="site-para-box">
+
+                    <h2>Colors</h2>
+
+                    <p>The new color palette consists of a cooler color palette with brighter colors (relative to the old color palette.)</p>
+
+                    <div>
+
+                        <div class="brand-colors">
+                            <div class="color" style="background-color: var(--fran-tan)"></div>
+                            <div class="content">
+                                <p class="name">--fran-tan</p>
+                                <p class="hex">#fdf0df</p>
+                            </div>
+                        </div>
+                        <div class="brand-colors">
+                            <div class="color" style="background-color: var(--fran-green)"></div>
+                            <div class="content">
+                                <p class="name">--fran-green</p>
+                                <p class="hex">#21421a</p>
+                            </div>
+                        </div>
+                        <div class="brand-colors">
+                            <div class="color" style="background-color: var(--fran-blue)"></div>
+                            <div class="content">
+                                <p class="name">--fran-blue</p>
+                                <p class="hex">#07647d</p>
+                            </div>
+                        </div>
+                        <div class="brand-colors">
+                            <div class="color" style="background-color: var(--fran-teal)"></div>
+                            <div class="content">
+                                <p class="name">--fran-teal</p>
+                                <p class="hex">#389789</p>
+                            </div>
+                        </div>
+                        <div class="brand-colors">
+                            <div class="color" style="background-color: var(--fran-brown)"></div>
+                            <div class="content">
+                                <p class="name">--fran-brown</p>
+                                <p class="hex">#c1986c</p>
+                            </div>
+                        </div>
+                        <div class="brand-colors">
+                            <div class="color" style="background-color: var(--fran-gold)"></div>
+                            <div class="content">
+                                <p class="name">--fran-gold</p>
+                                <p class="hex">#f5af50</p>
+                            </div>
+                        </div>
+                        <div class="brand-colors">
+                            <div class="color" style="background-color: var(--fran-red)"></div>
+                            <div class="content">
+                                <p class="name">--fran-red</p>
+                                <p class="hex">#8b3a19</p>
+                            </div>
+                        </div>
+
+                        <table class="color-table" style="margin-top: 2em; border: 1px solid #8c8c8c;">
+                            <tr>
+                                <th>x</th>
+                                <th>Black</th>
+                                <th>White</th>
+                                <th>Tan</th>
+                                <th>Green</th>
+                                <th>Blue</th>
+                                <th>Teal*</th>
+                                <th>Brown</th>
+                                <th>Gold</th>
+                                <th>Red</th>
+                            </tr>
+
+                            <tr>
+                                <td class="vert-title">Red</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant" style="background-color: var(--fran-red); color: white">Aa</td>
+                                <td class="contrast-compliant" style="background-color: var(--fran-red); color: var(--fran-tan);">Aa</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant" style="background-color: var(--fran-red); color: var(--fran-gold);">Aa</td>
+                                <td class="contrast-compliant">x</td>
+                            </tr>
+                            <tr>
+                                <td class="vert-title">Gold</td>
+                                <td class="contrast-compliant" style="background-color: var(--fran-gold); color: black;">Aa</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant" style="background-color: var(--fran-gold); color: var(--fran-green);">Aa</td>
+                                <td class="contrast-compliant" style="background-color: var(--fran-gold); color: var(--fran-blue);">Aa</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant" style="background-color: var(--fran-gold); color: var(--fran-red);">Aa</td>
+                            </tr>
+                            <tr>
+                                <td class="vert-title">Brown</td>
+                                <td class="contrast-compliant" style="background-color: var(--fran-brown); color: black;">Aa</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant" style="background-color: var(--fran-brown); color: var(--fran-green);">Aa</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant">x</td>
+                            </tr>
+                            <tr>
+                                <td class="vert-title">Teal*</td>
+                                <td class="contrast-compliant" style="background-color: var(--fran-teal); color: black;">Aa</td>
+                                <td class="contrast-compliant" style="background-color: var(--fran-teal); color: white;">Aa</td>
+                                <td class="contrast-compliant" style="background-color: var(--fran-teal); color: var(--fran-tan);">Aa</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant">x</td>
+                            </tr>
+                            <tr>
+                                <td class="vert-title">Blue</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant" style="background-color: var(--fran-blue); color: white;">Aa</td>
+                                <td class="contrast-compliant" style="background-color: var(--fran-blue); color: var(--fran-tan);">Aa</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant" style="background-color: var(--fran-blue); color: var(--fran-gold);">Aa</td>
+                                <td class="contrast-compliant">x</td>
+                            </tr>
+                            <tr>
+                                <td class="vert-title">Green</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant" style="background-color: var(--fran-green); color: white;">Aa</td>
+                                <td class="contrast-compliant" style="background-color: var(--fran-green); color: var(--fran-tan);">Aa</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant" style="background-color: var(--fran-green); color: var(--fran-brown);">Aa</td>
+                                <td class="contrast-compliant" style="background-color: var(--fran-green); color: var(--fran-gold);">Aa</td>
+                                <td class="contrast-compliant">x</td>
+                            </tr>
+                            <tr>
+                                <td class="vert-title">Tan</td>
+                                <td class="contrast-compliant" style="background-color: var(--fran-tan); color: black">Aa</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant" style="background-color: var(--fran-tan); color: var(--fran-green);">Aa</td>
+                                <td class="contrast-compliant" style="background-color: var(--fran-tan); color: var(--fran-blue);">Aa</td>
+                                <td class="contrast-compliant" style="background-color: var(--fran-tan); color: var(--fran-teal);">Aa</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant" style="background-color: var(--fran-tan); color: var(--fran-red);">Aa</td>
+                            </tr>
+                            <tr>
+                                <td class="vert-title">White</td>
+                                <td class="contrast-compliant" style="background-color: white; color: black;">Aa</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant" style="background-color: white; color: var(--fran-green);">Aa</td>
+                                <td class="contrast-compliant" style="background-color: white; color: var(--fran-blue);">Aa</td>
+                                <td class="contrast-compliant" style="background-color: white; color: var(--fran-teal);">Aa</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant" style="background-color: white; color: var(--fran-red);">Aa</td>
+                            </tr>
+                            <tr>
+                                <td class="vert-title">Black</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant" style="background-color: black; color: var(--fran-white);">Aa</td>
+                                <td class="contrast-compliant" style="background-color: black; color: var(--fran-tan);">Aa</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant">x</td>
+                                <td class="contrast-compliant" style="background-color: black; color: var(--fran-teal);">Aa</td>
+                                <td class="contrast-compliant" style="background-color: black; color: var(--fran-brown);">Aa</td>
+                                <td class="contrast-compliant" style="background-color: black; color: var(--fran-gold);">Aa</td>
+                                <td class="contrast-compliant">x</td>
+                            </tr>
+                        </table>
+
+                        <p>*The official brand teal is #349789. This was changed for web to allow for more varied use of the color.</p>
+                        <p><strong>Note:</strong> at some font weights and sizes, text may be below the acceptable contrast ratio. Be sure to check with inspect tools, Lighthouse, etc.</p>
+
+                    </div>
+
+                    <h3>Other Common Colors</h3>
+                    <p>Some colors aren't set specifically in the brand guide, but are used enough to be mentioned.</p>
+                    <div class="common-color-box" style="background-color: #e7e7e7; color: black;">#e7e7e7</div>
+                    <div class="common-color-box" style="background-color: #2b2b2b;">#2b2b2b</div>
+
+
+                    <h3>Old Colors</h3>
+                    <div class="common-color-box" style="background-color: #998643; color: black;">#998643</div>
+                    <p>The old Franciscan gold can still be used, but it lacks contrast versatility and does not complement the rest of the color palette as well.</p>
+
+                    <div class="common-color-box" style="background-color: #fbb555; color: black; margin-top: 1.5em;">#fbb555</div>
+                    <p>The old Franciscan yellow should no longer be used. Use --fran-gold instead.</p>
+
+                    <style>
+                        .color-table tr .vert-title {
+                            font-weight: 600;
+                            font-size: 1em;
+                        }
+                        .color-table td {
+                            width: 60px;
+                            height: 60px;
+                            text-align: center;
+                            font-size: 1.2em;
+                            font-weight: 600;
+                        }
+                        .brand-colors {
+                            display: inline-block;
+                            border: 1px solid white;
+                            border-radius: 5px;
+                            overflow: hidden;
+                        }
+                        .brand-colors .color {
+                            width: 100%;
+                            height: 40px;
+                        }
+                        .brand-colors .content {
+                            padding: 0.5em 0.5em 1em;
+                            text-align: center;
+                        }
+                        .brand-colors .content .name {
+                            margin-top: 0;
+                            margin-bottom: 0;
+                            font-weight: 600;
+                        }
+                        .brand-colors .content .hex {
+                            margin-top: 5px;
+                            margin-bottom: 0;
+                        }
+                        .common-color-box {
+                            border: 1px solid white;
+                            padding: 1.2em 0.8em;
+                            display: inline-block;
+                        }
+                    </style>
+
+                </div>
+            </section>
+
+
+
+            <!-- Fonts -->
+            <section class="row pad-3y">
+                <div class="site-para-box">
+                    <h2>Fonts</h2>
+
+                    <h3 style="font-family: 'bennet-banner'; font-size: 1.4em; margin-top: 0.5em; margin-bottom: 0.5em;">Bennet Banner</h3>
+                    <p>Bennet Banner </p>
+
+                    <h3 style="font-family: 'objektiv-mk3'; font-size: 1.2em; margin-top: 2em; margin-bottom: 0.5em;">Objectiv Mk-3</h3>
+                    <p>Bennet Banner </p>
+
+                </div>
+            </section>
+
+
+
+        </main>
+
+    </body>
+
+
+
+</html>

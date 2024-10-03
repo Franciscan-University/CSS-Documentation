@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" href="/favicon.ico">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="/Users/chummel/Desktop/Projects/Franciscan/Main CSS/fran.css">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="/Users/chummel/Desktop/Projects/Franciscan/Root/PDP/assets/boot.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/269f123423.js" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    
+
+    </head>
+
+
+    <body>
+
+        <header class="doc-header">
+            <div class="doc-header-wrap">
+                <div class="logo">
+                    <p><a href="home.html">Franciscan Brands CSS Documentation</a></p>
+                </div>
+
+                <div class="right-side-nav">
+                    <ul>
+                        <li><a href="good-to-know.html">Good to Know</a></li>
+                        <li><a href="general-css.html">General CSS</a></li>
+                        <li><a href="fran-css.html">Franciscan CSS</a></li>
+                        <li><a href="#">Faith & Reason CSS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+
+
+        <main class="general-css-main">
+
+            <!-- Intro -->
+            <section class="row">
+                <div class="site-para-box">
+                    <h1>General CSS</h1>
+                    <p><em>Page last updated Oct 2, 2024</em></p>
+                </div>
+            </section>
+
+
+            <!-- Rows -->
+            <section class="row pad-2y" id="row">
+                <div class="site-para-box">
+
+                    <h2>Rows</h2>
+
+                    <span>Jump to:</span>
+                    <ul class="in-page-nav">
+                        <li><a href="#rowIntroduction">Introduction</a></li>
+                        <li><a href="#rowRegularUseCases">Regular Use Cases</a></li>
+                        <li><a href="#rowCommonMistakes">Common Mistakes</a></li>
+                    </ul>
+
+                    <div id="rowIntroduction" class="doc-code-wrap">
+                        <samp>
+                            .row {
+                                <span class="ind-1">display:-ms-flexbox;</span>
+                                <span class="ind-1">display:flex;</span>
+                                <span class="ind-1">-ms-flex-wrap:wrap;</span>
+                                <span class="ind-1">flex-wrap:wrap;</span>
+                                <span class="ind-1">width: 100%!important;</span>
+                            }
+                        </samp>
+                    </div>
+
+
+                    <p>The <code>row</code> class is useful for splitting up documents into different sections by reaching 100% of the width
+                        of the element it is contained in. So if it's used immediately in the body tag, where the body streches the entirety of the page,
+                        the element with the row class will be stretched the entirety of the page. In the example below, its parent element class is 
+                        <a href="#siteParaBox"><code>site-para-box</code></a>, so the element with class <code>row</code> stretches to the full width of 
+                        <code>site-para-box</code>.
+                    </p> 
+
+                    <p>
+                        In its use with the column classes, <code>row</code> has the <code>display: flex</code> style built in. It also allows content within it
+                        to wrap&mdash;which can be an advantage or a disadvantage. On one hand, if you have many columns and don't want to worry about starting a new row 
+                        each time the column length exceeds 12, <code>row</code> already takes care of that for you. However, if you have other elements in row 
+                        that you'd like to be stacked vertically, but those elements added do not exceed a width of 100%, they will align horizontally instead. 
+                    </p>
+                        
+
+                    <h3 id="rowRegularUseCases" style="margin-top: 2em;">Regular Use Cases</h3>
+
+                    <p><em>A row with text.</em></p>
+                    <div class="row pad-3y" style="background-color: #c1c1c1;">
+                        <p>This is a row element (with some padding and background-color applied).</p>
+                    </div>
+                    
+
+                    <p style="margin-top: 2em;"><em>A row with same-sized columns that are together 12 units long.</em></p>
+                    <div class="row">
+                        <div class="col-lg-4" style="background-color: #ec6767; padding-bottom: 6em;">
+                            <p>This is a large column with size 4.</p>
+                        </div>
+                        <div class="col-lg-4" style="background-color: #95eda2; padding-bottom: 6em;">
+                            <p>This is a large column with size 4.</p>
+                        </div>
+                        <div class="col-lg-4" style="background-color: #8fa6e1; padding-bottom: 6em;">
+                            <p>This is a large column with size 4.</p>
+                        </div>
+                    </div>
+
+
+                    <p style="margin-top: 2em;"><em>A row with different-sized columns that are together 12 units long.</em></p>
+                    <div class="row">
+                        <div class="col-lg-4" style="background-color: #ec6767; padding-bottom: 6em;">
+                            <p>This is a large column with size 4.</p>
+                        </div>
+                        <div class="col-lg-5" style="background-color: #95eda2; padding-bottom: 6em;">
+                            <p>This is a large column with size 5.</p>
+                        </div>
+                        <div class="col-lg-3" style="background-color: #8fa6e1; padding-bottom: 6em;">
+                            <p>This is a large column with size 3.</p>
+                        </div>
+                    </div>
+
+
+                    <p style="margin-top: 2em;"><em>A row with columns that together exceed 12 units long.</em></p>
+                    <div class="row">
+                        <div class="col-lg-4" style="background-color: #ec6767; padding-bottom: 6em;">
+                            <p>This is a large column with size 4.</p>
+                        </div>
+                        <div class="col-lg-5" style="background-color: #95eda2; padding-bottom: 6em;">
+                            <p>This is a large column with size 5.</p>
+                        </div>
+                        <div class="col-lg-3" style="background-color: #8fa6e1; padding-bottom: 6em;">
+                            <p>This is a large column with size 3.</p>
+                        </div>
+                        <div class="col-lg-2" style="background-color: #e1b78f; padding-bottom: 6em;">
+                            <p>This is a large column with size 2.</p>
+                        </div>
+                        <div class="col-lg-8" style="background-color: #de8fe1; padding-bottom: 6em;">
+                            <p>This is a large column with size 8.</p>
+                        </div>
+                        <div class="col-lg-2" style="background-color: #e18f8f; padding-bottom: 6em;">
+                            <p>This is a large column with size 2.</p>
+                        </div>
+                        <div class="col-lg-5" style="background-color: #8fe0e1; padding-bottom: 6em;">
+                            <p>This is a large column with size 5.</p>
+                        </div>
+                    </div>
+
+
+                    <h3 id="rowCommonMistakes" style="margin-top: 2em;">Common Mistakes</h3>
+                    <p style="margin-bottom: 0;"><em>Be careful with placing max-widths on immediate child elements to <code>row</code> class elements.</em></p>
+                    <p style="margin-top: 0;"><em>This probably isn't what one would intend: </em></p>
+                    <div class="row pad-3y" style="background-color: #c1c1c1;">
+                        <div class="site-para-box" style="max-width: 400px; margin: auto;">
+                            <p>Here is some content. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </div>
+                        <button class="root-lowercase-btn" style="--root-lowercase-btn-background-color: #21412a; --root-lowercase-btn-color: white;">Button</button>
+                    </div>
+
+                    <p style="margin-top: 2em;"><em>Rather, this: </em></p>
+                    <div class="row pad-3y" style="background-color: #c1c1c1;">
+                        <div class="site-para-box" style="max-width: 400px; margin: auto;">
+                            <p>Here is some content. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                            <button class="root-lowercase-btn" style="--root-lowercase-btn-background-color: #21412a; --root-lowercase-btn-color: white;">Button</button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+
+
+            <!-- Columns -->
+            <section class="row pad-2y" id="row">
+                <div class="site-para-box">
+
+                    <h2>Columns</h2>
+
+                    <span>Jump to:</span>
+                    <ul class="in-page-nav">
+                        <li><a href="#columnsIntroduction">Introduction</a></li>
+                        <li><a href="#columnsSizes">Regular Use Cases</a></li>
+                    </ul>
+
+
+                    <p id="columnsIntroduction">
+                        There are many column classes, however they only fit into two categories&mdash;size and break point&mdash; and each with their own use depending on window size, content within the column, etc. 
+                        Currently, there are 12 different columns sizes with 2 different breaking points for each.  
+                    </p>
+
+                    <h3 id="columnsSizes" style="margin-top: 2em;">Sizes</h3>
+                    <p>
+                        There are 12 sizes for the column classes. They are denoted by <code>col-md-*</code> where the <code>md</code>
+                    </p>
+
+                    <p style="margin-top: 2em; margin-bottom: 3px;"><em><strong>Size 1</strong> columns with medium break.</em></p>
+                    <div class="row">
+                        <div class="col-md-1" style="background-color: #b9e2c5; padding-bottom: 2em;">Size 1</div>
+                        <div class="col-md-1" style="background-color: #d7ceae; padding-bottom: 2em;">Size 1</div>
+                        <div class="col-md-1" style="background-color: #b9e2c5; padding-bottom: 2em;">Size 1</div>
+                        <div class="col-md-1" style="background-color: #d7ceae; padding-bottom: 2em;">Size 1</div>
+                        <div class="col-md-1" style="background-color: #b9e2c5; padding-bottom: 2em;">Size 1</div>
+                        <div class="col-md-1" style="background-color: #d7ceae; padding-bottom: 2em;">Size 1</div>
+                        <div class="col-md-1" style="background-color: #b9e2c5; padding-bottom: 2em;">Size 1</div>
+                        <div class="col-md-1" style="background-color: #d7ceae; padding-bottom: 2em;">Size 1</div>
+                        <div class="col-md-1" style="background-color: #b9e2c5; padding-bottom: 2em;">Size 1</div>
+                        <div class="col-md-1" style="background-color: #d7ceae; padding-bottom: 2em;">Size 1</div>
+                        <div class="col-md-1" style="background-color: #b9e2c5; padding-bottom: 2em;">Size 1</div>
+                        <div class="col-md-1" style="background-color: #d7ceae; padding-bottom: 2em;">Size 1</div>
+                    </div>
+
+                    <p style="margin-top: 2em; margin-bottom: 3px;"><em><strong>Size 2</strong> columns with medium break.</em></p>
+                    <div class="row">
+                        <div class="col-md-2" style="background-color: #99a7e0; padding-bottom: 2em;">Size 2</div>
+                        <div class="col-md-2" style="background-color: #d89375; padding-bottom: 2em;">Size 2</div>
+                        <div class="col-md-2" style="background-color: #99a7e0; padding-bottom: 2em;">Size 2</div>
+                        <div class="col-md-2" style="background-color: #d89375; padding-bottom: 2em;">Size 2</div>
+                        <div class="col-md-2" style="background-color: #99a7e0; padding-bottom: 2em;">Size 2</div>
+                        <div class="col-md-2" style="background-color: #d89375; padding-bottom: 2em;">Size 2</div>
+                    </div>
+
+
+                    <p style="margin-top: 2em; margin-bottom: 3px;"><em><strong>Size 3</strong> columns with medium break.</em></p>
+                    <div class="row">
+                        <div class="col-md-3" style="background-color: #e09999; padding-bottom: 2em;">Size 3</div>
+                        <div class="col-md-3" style="background-color: #c475d8; padding-bottom: 2em;">Size 3</div>
+                        <div class="col-md-3" style="background-color: #e09999; padding-bottom: 2em;">Size 3</div>
+                        <div class="col-md-3" style="background-color: #c475d8; padding-bottom: 2em;">Size 3</div>
+                    </div>
+
+                    <p style="margin-top: 2em; margin-bottom: 3px;"><em><strong>Size 4</strong> columns with medium break.</em></p>
+                    <div class="row">
+                        <div class="col-md-4" style="background-color: #ec6767; padding-bottom: 2em;">Size 4</div>
+                        <div class="col-md-4" style="background-color: #95eda2; padding-bottom: 2em;">Size 4</div>
+                        <div class="col-md-4" style="background-color: #8fa6e1; padding-bottom: 2em;">Size 4</div>
+                    </div>
+
+                    <p style="margin-top: 2em; margin-bottom: 3px;"><em><strong>Size 6</strong> columns with medium break.</em></p>
+                    <div class="row">
+                        <div class="col-md-6" style="background-color: #67ecb2; padding-bottom: 2em;">Size 6</div>
+                        <div class="col-md-6" style="background-color: #9595ed; padding-bottom: 2em;">Size 6</div>
+                    </div>
+
+                    <p style="margin-top: 2em; margin-bottom: 3px;"><em><strong>Size 7</strong> columns with medium break.</em></p>
+                    <div class="row">
+                        <div class="col-md-7" style="background-color: #e567ec; padding-bottom: 2em;">Size 7</div>
+                    </div>
+
+                    <p>...and so on, up until 12.</p>
+                    <p style="margin-top: 2em; margin-bottom: 3px;"><em><strong>Size 12</strong> columns with medium break.</em></p>
+                    <div class="row">
+                        <div class="col-md-12" style="background-color: #bfbfbf; padding-bottom: 2em;">Size 12</div>
+                    </div>
+
+                    
+
+                </div>
+            </section>
+
+
+
+
+            <!-- Content and Paragraph Boxes -->
+            <section class="row pad-2y" id="row">
+                <div class="site-para-box">
+
+                    <h2>Content and Paragraph Boxes</h2>
+
+                    <p>
+                        There are two main ways of containing page content so that text and images aren't hitting the sides of the screen/viewport: <code>site-content-box</code> and <code>site-para-box</code>.
+                        The content box class (<code>site-content-box</code>) is slightly bigger, stretching to 85% of the parent element's width, whereas the paragraph box class (<code>site-para-box</code>) is only 75% of the parent's width. 
+                    </p>
+                    <p>
+                        Originally, only the paragraph box existed, and it is still the standard for sections that contain text-only or heavy-text content areas. A larger section was needed, however, for content that contained wider content, such as an array of professor profiles or an image heavy section. Thus, <code>site-content-box</code> was created.
+                    </p>
+                    <p>Both collapse at 500px to 90% and 1em padding on either side.</p>
+
+                    <div class="doc-code-wrap">
+                        <samp>
+                            .site-para-box {
+                                <span class="ind-1">width: 75%;</span>
+                                <span class="ind-1">margin: auto;</span>
+                            }
+
+                            .site-content-box {
+                                <span class="ind-1">width: 85%;</span>
+                                <span class="ind-1">margin: auto;</span>
+                            }
+
+                            @media only screen and (max-width: 500px) {
+                                <span class="ind-1">.site-para-box, .site-content-box {</span>
+                                    <span class="ind-2">width: 90%;</span>
+                                    <span class="ind-2">padding-left: 1em;</span>
+                                    <span class="ind-2">padding-right: 1em;</span>
+                                    <span class="ind-1">}
+                            }
+                        </samp>
+                    </div>
+
+
+                    <div class="row pad-3y" style="background-color: #e7e7e7;">
+                        <div class="site-para-box">
+                            <p style="color: black">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non lacus quis lectus egestas feugiat efficitur id ligula. Maecenas at dolor erat. Donec libero magna, consectetur ut interdum ac, ornare nec diam. Pellentesque pellentesque, neque eget vehicula suscipit, risus nibh pharetra sapien, quis pharetra nulla risus ullamcorper nisl. Sed venenatis egestas erat, dignissim scelerisque odio mattis quis. Aenean convallis mattis libero rhoncus aliquam. Donec convallis lacinia nisi, non consequat lorem sagittis ac. Maecenas in ex vel felis convallis iaculis vitae placerat lorem. Nam id purus vitae velit finibus euismod. Sed mollis rhoncus nisl non pulvinar.
+                            </p>
+                            <p style="color: black">
+                                Pellentesque bibendum blandit quam, cursus accumsan risus gravida id. Vestibulum viverra sem dui, nec euismod urna scelerisque quis. Donec ac cursus massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis nulla felis, efficitur nec nulla quis, mollis vehicula mi. Ut fermentum ipsum libero, ac condimentum dolor iaculis nec. Nam dolor ipsum, fermentum ac lobortis et, congue et ex. Nulla ultrices nunc nulla, ut elementum turpis egestas eu. Nam ut nisl sapien.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row pad-3y" style="background-color: #e7e7e7; margin-top: 1em;">
+                        <div class="site-content-box">
+                            
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="site-content-col" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/9b/Pink_flower_02_Orcas.JPG')"></div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="site-content-col" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/ba/Flower_jtca001.jpg')"></div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="site-content-col" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/74/Purepl-pink-spring-flowers_-_West_Virginia_-_ForestWander.jpg')"></div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="site-content-col" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c5/Various_flowers.jpg')"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <style>
+                        .site-content-col {
+                            width: 95%;
+                            height: 200px;
+                            margin: auto;
+                            background-size: cover;
+                        }
+                    </style>
+
+                    <h3>Adding Maximum Widths</h3>
+                    <p>
+                        Oftentimes, you will want to add a 'max-width' style to the <code>site-content-box</code> or <code>site-para-box</code> element in order to keep the content from stretching too wide.
+                        The two classes do not have a set maximum width in order to allow greater flexibility to the developer. Typical max-width settings are around 1300px, but different situations will call for different max-widths.
+                    </p>
+
+                    
+                </div>
+            </section>
+
+
+
+            <!-- Padding Presets -->
+            <section class="row pad-2y" id="row">
+                <div class="site-para-box">
+
+                    <h2>Padding Presets</h2>
+
+                    <p>
+                        There are a handful of preset classes created for element padding. They follow the structure 'pad-*x' for horizontal padding and 'pad-*y' for vertical padding. Values range 1-4.
+                    </p>
+                    <p>For example:</p>
+                    <p style="margin-bottom: 0;">Using <code>pad-1y</code> gives a small amount of padding on the top and bottom...</p>  
+
+                    <div class="row pad-1y" style="background-color: #e7e7e7;">
+                        <div class="site-para-box">
+                            <p style="color: black">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non lacus quis lectus egestas feugiat efficitur id ligula. Maecenas at dolor erat. Donec libero magna, consectetur ut interdum ac, ornare nec diam. Pellentesque pellentesque, neque eget vehicula suscipit, risus nibh pharetra sapien, quis pharetra nulla risus ullamcorper nisl. Sed venenatis egestas erat, dignissim scelerisque odio mattis quis. Aenean convallis mattis libero rhoncus aliquam. Donec convallis lacinia nisi, non consequat lorem sagittis ac. Maecenas in ex vel felis convallis iaculis vitae placerat lorem. Nam id purus vitae velit finibus euismod. Sed mollis rhoncus nisl non pulvinar.
+                            </p>
+                        </div>
+                    </div>
+
+                    <p style="margin-bottom: 0;">...while <code>pad-4y</code> gives a greater amount of padding.</p>
+                    <div class="row pad-4y" style="background-color: #e7e7e7;">
+                        <div class="site-para-box">
+                            <p style="color: black">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non lacus quis lectus egestas feugiat efficitur id ligula. Maecenas at dolor erat. Donec libero magna, consectetur ut interdum ac, ornare nec diam. Pellentesque pellentesque, neque eget vehicula suscipit, risus nibh pharetra sapien, quis pharetra nulla risus ullamcorper nisl. Sed venenatis egestas erat, dignissim scelerisque odio mattis quis. Aenean convallis mattis libero rhoncus aliquam. Donec convallis lacinia nisi, non consequat lorem sagittis ac. Maecenas in ex vel felis convallis iaculis vitae placerat lorem. Nam id purus vitae velit finibus euismod. Sed mollis rhoncus nisl non pulvinar.
+                            </p>
+                        </div>
+                    </div>
+
+                    <p>Personally, I've found the pad-*x classes to be somewhat useless. They follow the same pattern as above, just adding padding horizontally instead.</p>
+
+                    
+                </div>
+            </section>
+
+
+
+        </main>
+
+    </body>
+
+
+
+</html>
